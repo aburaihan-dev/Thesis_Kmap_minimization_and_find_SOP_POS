@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -7,9 +8,9 @@ public class Minterm_Group {
     private String bit_string;
     private List<Minterm> groupedMinterms;
 
-    public Minterm_Group(String bit_string, List<Minterm> groupedMinterms) {
+    public Minterm_Group(String bit_string) {
         this.bit_string = bit_string;
-        this.groupedMinterms = groupedMinterms;
+        this.groupedMinterms = new ArrayList<>();
     }
 
     public String getBit_string() {
@@ -26,5 +27,9 @@ public class Minterm_Group {
 
     public void setGroupedMinterms(List<Minterm> groupedMinterms) {
         this.groupedMinterms = groupedMinterms;
+    }
+
+    public void addToGroupedMinterms(Minterm minterm){
+        this.groupedMinterms.add(minterm);
     }
 }

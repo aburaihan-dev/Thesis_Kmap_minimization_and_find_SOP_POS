@@ -4,12 +4,13 @@
 public class Minterm {
     private int minterm_no;
     private String bit_string;
-    private boolean paired;
+
+    public Minterm() {
+    }
 
     public Minterm(int minterm_no, String bit_string) {
         this.minterm_no = minterm_no;
         this.bit_string = bit_string;
-        this.paired = false;
     }
 
     public int getMinterm_no() {
@@ -26,13 +27,5 @@ public class Minterm {
 
     public void setBit_string(String bit_string) {
         this.bit_string = bit_string;
-    }
-
-    public boolean isPaired() {
-        return paired;
-    }
-
-    public void setPaired(boolean paired) {
-        this.paired = paired;
     }
 }
