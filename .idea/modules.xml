@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Greedy Algorithm/Greedy Algorithm.iml" filepath="$PROJECT_DIR$/Greedy Algorithm/Greedy Algorithm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Proposed Algorithm/Proposed Algorithm.iml" filepath="$PROJECT_DIR$/Proposed Algorithm/Proposed Algorithm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Quine–McCluskey Algorithm/Quine–McCluskey Algorithm.iml" filepath="$PROJECT_DIR$/Quine–McCluskey Algorithm/Quine–McCluskey Algorithm.iml" />
+    </modules>
+  </component>
+</project>
