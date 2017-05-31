@@ -25,11 +25,24 @@ public class Minterm_Group {
         return groupedMinterms;
     }
 
+    public String getAllMinterms() {
+        String str = "";
+        for (int i = 0; i < groupedMinterms.size(); i++) {
+            str += String.valueOf(groupedMinterms.get(i)) + " ";
+        }
+        return str;
+    }
+
     public void setGroupedMinterms(List<Minterm> groupedMinterms) {
         this.groupedMinterms = groupedMinterms;
     }
 
-    public void addToGroupedMinterms(Minterm minterm){
+    public void addToGroupedMinterms(Minterm minterm) {
         this.groupedMinterms.add(minterm);
+    }
+
+    @Override
+    public String toString() {
+        return bit_string;
     }
 }

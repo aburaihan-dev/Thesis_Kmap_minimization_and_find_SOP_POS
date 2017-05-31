@@ -1,0 +1,24 @@
+****************************************************
+Proposed Algorithm
+Kmap Data: 0 3 7 11 15 9 -1
+Start Time: 3348643269851
+End Time: 3348644166703
+Total execution time: 896852
+Total execution time: 0.896852s 
+****************************************************
+****************************************************
+Proposed Algorithm
+Kmap Data: 0 3 7 11 15 9 -1
+Start Time: 5422844664025
+End Time: 5422845371011
+Total execution time: 706986
+Total execution time: 7.06986E-4s 
+****************************************************
+****************************************************
+Proposed Algorithm
+Kmap Data: 0 3 7 11 15 9 -1
+Start Time: 5477832992142
+End Time: 5477833746488
+Total execution time: 754346
+Total execution time: 0.754346s 
+****************************************************
