@@ -1,0 +1,16 @@
+****************************************************
+Quine-McCluskey Algorithm
+Kmap Data: 0 3 7 11 15 9 -1
+Start Time: 6138248759260
+End Time: 6138254263660
+Total execution time: 5504400
+Total execution time: 5.5044 mili.Sec 
+****************************************************
+****************************************************
+Quine-McCluskey Algorithm
+Kmap Data: 0 3 7 11 15 9 -1
+Start Time: 6888896861184
+End Time: 6888902514866
+Total execution time: 5653682
+Total execution time: 5.653682 mili.Sec 
+****************************************************

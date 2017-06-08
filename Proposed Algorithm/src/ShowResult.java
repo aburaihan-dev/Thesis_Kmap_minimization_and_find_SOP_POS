@@ -12,6 +12,7 @@ public class ShowResult {
     }
 
     public static void showPairs(List<Minterm_Group> groups) {
+        System.out.println("Patterns    Minterm Groups");
         for (Minterm_Group group : groups) {
             System.out.println(resultConverter(group.getBit_string()) + "  " + group.getAllMinterms());
         }

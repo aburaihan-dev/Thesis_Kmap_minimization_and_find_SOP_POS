@@ -143,10 +143,12 @@ public class ProposedAlgorithm_v2 {
             }
         }
 
+        final long endTime = System.nanoTime();
+
         System.out.println("Total pairs: " + pairs.size());
         ShowResult.showPairs(pairs);
 
-        final long endTime = System.nanoTime();
+
 
 //        System.out.println("Start Time: " + startTime);
 //        System.out.println("End Time: " + endTime);

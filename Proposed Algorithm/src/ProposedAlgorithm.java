@@ -15,9 +15,8 @@ public class ProposedAlgorithm {
         List<List<Minterm>> kMap = new ArrayList<>();
         // patterns holder.
         List<List<Minterm_Group>> patterns = new ArrayList<>();
-//        List<List<Minterm_Group>> patternsFinale = new ArrayList<>();
         List<Minterm_Group> pairs = new ArrayList<>();
-//        Map<String, Boolean> minterms = new HashMap<>();
+        List<Minterm> minterms = new ArrayList<>();
         Scanner scan = new Scanner(System.in);
 
         boolean dontcaresAvailable;
@@ -29,18 +28,18 @@ public class ProposedAlgorithm {
 //            patternsFinale.add(new ArrayList<>());
         }
 
+        Minterm minterm1;
+
         System.out.print("Enter minterm: ");
         while ((minterm = scan.nextInt()) != -1) {
+            minterm1 = new Minterm(minterm, String.format("%4s", Integer.toBinaryString(minterm)).replace(" ", "0"));
             if (minterm % 2 == 0) {
-                lsb_0.add(new Minterm(minterm, String.format("%4s", Integer.toBinaryString(minterm)).replace(" ",
-                                                                                                             "0")));
+                lsb_0.add(minterm1);
 
             } else {
-                lsb_1.add(new Minterm(minterm, String.format("%4s", Integer.toBinaryString(minterm)).replace(" ",
-                                                                                                             "0")));
+                lsb_1.add(minterm1);
             }
-//            minterms.put(String.format("%4s", Integer.toBinaryString(minterm)).replace(" ",
-//                                                                                       "0"), false);
+            minterms.add(minterm1);
 //            System.out.print("Enter minterm: ");
         }
 
@@ -48,7 +47,8 @@ public class ProposedAlgorithm {
         kMap.add(lsb_1);
 
         int count = 0;
-        System.out.println("STEP-1.....................");
+        System.out.println("STEP-1.....................\n");
+        System.out.println("Patterns Minterm Groups");
         final long startTime = System.nanoTime();
         for (List<Minterm> lsb : kMap) {
             int groupCount = 1;
@@ -72,8 +72,8 @@ public class ProposedAlgorithm {
                         pattern[location] = 'x';
                         lsb.get(i).setPaired(true);
                         lsb.get(j).setPaired(true);
-//                        minterms.put(lsb.get(i).getBit_string(), true);
-//                        minterms.put(lsb.get(j).getBit_string(), true);
+                        minterms.remove(lsb.get(i));
+                        minterms.remove(lsb.get(j));
                         Minterm_Group mintermGroup = new Minterm_Group(String.copyValueOf(pattern));
                         mintermGroup.addToGroupedMinterms(lsb.get(i));
                         mintermGroup.addToGroupedMinterms(lsb.get(j));
@@ -87,43 +87,51 @@ public class ProposedAlgorithm {
             groupCount--;
         }
 
-//        for (int i = 0; i < lsb.size(); i++) {
-//            List<Minterm> lsb_ = kMap.get(groupCount);
-//            if (!lsb.get(i).isPaired()) {
-//                for (Minterm minterm1 : lsb_) {
-//                    String min_1 = lsb.get(i).getBit_string();
-//                    String min_2 = minterm1.getBit_string();
-//                    int location = 0;
-//                    int diff = 0;
-//                    for (int k = 0; k < min_1.length(); k++) {
-//                        if (min_1.charAt(k) != min_2.charAt(k)) {
-////                        System.out.println(min_1 + "  " + min_2);
-//                            diff++;
-//                            location = k;
-//                        }
-//                    }
-//
-//                    if (diff == 1) {
-//                        char[] pattern = min_1.toCharArray();
-//                        pattern[location] = 'x';
-//                        lsb.get(i).setPaired(true);
-//                        minterm1.setPaired(true);
-//                        minterms.put(lsb.get(i).getBit_string(), true);
-//                        minterms.put(minterm1.getBit_string(), true);
-//                        Minterm_Group mintermGroup = new Minterm_Group(String.copyValueOf(pattern));
-//                        mintermGroup.addToGroupedMinterms(lsb.get(i));
-//                        mintermGroup.addToGroupedMinterms(minterm1);
-//                        patterns.get(location).add(mintermGroup);
-//                        patternsCount++;
-//                    }
-//                }
-//            }
-//        }
+        for (int i = 0; i < minterms.size(); i++) {
+            for (int j = i + 1; j < minterms.size(); j++) {
+                count++;
+                String min_1 = minterms.get(i).getBit_string();
+                String min_2 = minterms.get(j).getBit_string();
+                int diff = 0;
+                int location = 0;
+                for (int k = 0; k < min_1.length(); k++) {
+                    if (min_1.charAt(k) != min_2.charAt(k)) {
+//                        System.out.println(min_1 + "  " + min_2);
+                        diff++;
+                        location = k;
+                    }
+                }
 
-        System.out.println(count);
-        System.out.println("Patterns: " + patternsCount);
-//        System.out.println("STEP-2 ..............");
+                if (diff == 1) {
+                    char[] pattern = min_1.toCharArray();
+                    pattern[location] = 'x';
+                    minterms.get(i).setPaired(true);
+                    minterms.get(j).setPaired(true);
+                    Minterm_Group mintermGroup = new Minterm_Group(String.copyValueOf(pattern));
+                    mintermGroup.addToGroupedMinterms(minterms.get(i));
+                    mintermGroup.addToGroupedMinterms(minterms.get(j));
+                    minterms.remove(minterms.get(j));
+                    minterms.remove(minterms.get(i));
+                    patterns.get(location).add(mintermGroup);
+                    System.out.println(mintermGroup.getBit_string() + "    " + mintermGroup.getAllMinterms());
+                    patternsCount++;
+                }
+            }
+        }
 
+        if (minterms.size() >= 1) {
+            for (Minterm minterm2 : minterms) {
+                count++;
+                Minterm_Group minterm_group = new Minterm_Group(minterm2.getBit_string());
+                minterm_group.setGroupedMinterms(new ArrayList<>());
+                minterm_group.addToGroupedMinterms(minterm2);
+                pairs.add(minterm_group);
+            }
+        }
+
+        System.out.println("\nStep-1 Iteration Count: " + count);
+        System.out.println("Patterns Found: " + patternsCount);
+        System.out.println("STEP-2..........................\n");
         for (int i = 0; i < patterns.size(); i++) {
             if (patterns.get(i).size() == 1) {
                 pairs.add(patterns.get(i).get(0));
@@ -147,12 +155,12 @@ public class ProposedAlgorithm {
                     }
 
                     if (bit_diff == 1) {
-                        System.out.println(mintermGroup + " " + mintermGroup1);
-                        System.out.println(patterns.get(i).get(j).getGroupedMinterms() + "  " + patterns.get(i).get(g)
-                                .getGroupedMinterms());
-                        char[] patrn = mintermGroup.toCharArray();
-                        patrn[location] = 'x';
-                        Minterm_Group group = new Minterm_Group(String.copyValueOf(patrn));
+//                        System.out.println(mintermGroup + " " + mintermGroup1);
+//                        System.out.println(patterns.get(i).get(j).getGroupedMinterms() + "  " + patterns.get(i).get(g)
+//                                .getGroupedMinterms());
+                        char[] pattern = mintermGroup.toCharArray();
+                        pattern[location] = 'x';
+                        Minterm_Group group = new Minterm_Group(String.copyValueOf(pattern));
 
                         group.setGroupedMinterms(new ArrayList<>(patterns.get(i).get(j).getGroupedMinterms()));
                         group.getGroupedMinterms().addAll(patterns.get(i).get(g).getGroupedMinterms());
@@ -162,10 +170,11 @@ public class ProposedAlgorithm {
             }
         }
 
+        final long endTime = System.nanoTime();
+
         System.out.println("Total pairs: " + pairs.size());
         ShowResult.showPairs(pairs);
 
-        final long endTime = System.nanoTime();
 
 //        System.out.println("Start Time: " + startTime);
 //        System.out.println("End Time: " + endTime);

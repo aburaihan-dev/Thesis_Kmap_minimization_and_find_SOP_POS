@@ -97,7 +97,7 @@ public class QuineMcCluskeyAlgorithm {
         System.out.println("Start Time: " + startTime);
         System.out.println("End Time: " + endTime);
         System.out.println("Total execution time: " + (double)(endTime - startTime)/1000000 + " mili.Sec \n");
-        File file = new File("logs_1.txt");
+        File file = new File("logs_2.txt");
         try (PrintStream out = new PrintStream(new FileOutputStream(file,true))) {
             out.println("****************************************************");
             out.println("Quine-McCluskey Algorithm");
