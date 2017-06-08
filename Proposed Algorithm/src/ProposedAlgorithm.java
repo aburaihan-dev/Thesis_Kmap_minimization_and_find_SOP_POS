@@ -88,35 +88,74 @@ public class ProposedAlgorithm {
         }
 
         for (int i = 0; i < minterms.size(); i++) {
-            for (int j = i + 1; j < minterms.size(); j++) {
-                count++;
-                String min_1 = minterms.get(i).getBit_string();
-                String min_2 = minterms.get(j).getBit_string();
-                int diff = 0;
-                int location = 0;
-                for (int k = 0; k < min_1.length(); k++) {
-                    if (min_1.charAt(k) != min_2.charAt(k)) {
+            if (minterms.size() > 1) {
+                for (int j = i + 1; j < minterms.size(); j++) {
+                    count++;
+                    String min_1 = minterms.get(i).getBit_string();
+                    String min_2 = minterms.get(j).getBit_string();
+                    int diff = 0;
+                    int location = 0;
+                    for (int k = 0; k < min_1.length(); k++) {
+                        if (min_1.charAt(k) != min_2.charAt(k)) {
 //                        System.out.println(min_1 + "  " + min_2);
-                        diff++;
-                        location = k;
+                            diff++;
+                            location = k;
+                        }
+                    }
+
+                    if (diff == 1) {
+                        char[] pattern = min_1.toCharArray();
+                        pattern[location] = 'x';
+                        minterms.get(i).setPaired(true);
+                        minterms.get(j).setPaired(true);
+                        Minterm_Group mintermGroup = new Minterm_Group(String.copyValueOf(pattern));
+                        mintermGroup.addToGroupedMinterms(minterms.get(i));
+                        mintermGroup.addToGroupedMinterms(minterms.get(j));
+                        minterms.remove(minterms.get(j));
+                        minterms.remove(minterms.get(i));
+                        patterns.get(location).add(mintermGroup);
+                        System.out.println(mintermGroup.getBit_string() + "    " + mintermGroup.getAllMinterms());
+                        patternsCount++;
                     }
                 }
+            } else {
+                int q = 0;
+                if (minterms.get(i).getMinterm_no() % 2 == 1) {
+                    q = 0;
+                } else {
+                    q = 1;
+                }
 
-                if (diff == 1) {
-                    char[] pattern = min_1.toCharArray();
-                    pattern[location] = 'x';
-                    minterms.get(i).setPaired(true);
-                    minterms.get(j).setPaired(true);
-                    Minterm_Group mintermGroup = new Minterm_Group(String.copyValueOf(pattern));
-                    mintermGroup.addToGroupedMinterms(minterms.get(i));
-                    mintermGroup.addToGroupedMinterms(minterms.get(j));
-                    minterms.remove(minterms.get(j));
-                    minterms.remove(minterms.get(i));
-                    patterns.get(location).add(mintermGroup);
-                    System.out.println(mintermGroup.getBit_string() + "    " + mintermGroup.getAllMinterms());
-                    patternsCount++;
+                for (int j = 0; j < kMap.get(q).size() && minterms.size()>0; j++) {
+                    count++;
+                    String min_1 = minterms.get(i).getBit_string();
+                    String min_2 = kMap.get(q).get(j).getBit_string();
+                    int diff = 0;
+                    int location = 0;
+                    for (int k = 0; k < min_1.length(); k++) {
+                        if (min_1.charAt(k) != min_2.charAt(k)) {
+//                        System.out.println(min_1 + "  " + min_2);
+                            diff++;
+                            location = k;
+                        }
+                    }
+
+                    if (diff == 1) {
+                        char[] pattern = min_1.toCharArray();
+                        pattern[location] = 'x';
+                        minterms.get(i).setPaired(true);
+                        minterms.get(j).setPaired(true);
+                        Minterm_Group mintermGroup = new Minterm_Group(String.copyValueOf(pattern));
+                        mintermGroup.addToGroupedMinterms(minterms.get(i));
+                        mintermGroup.addToGroupedMinterms(kMap.get(q).get(j));
+                        minterms.remove(minterms.get(i));
+                        patterns.get(location).add(mintermGroup);
+                        System.out.println(mintermGroup.getBit_string() + "    " + mintermGroup.getAllMinterms());
+                        patternsCount++;
+                    }
                 }
             }
+
         }
 
         if (minterms.size() >= 1) {
@@ -132,6 +171,7 @@ public class ProposedAlgorithm {
         System.out.println("\nStep-1 Iteration Count: " + count);
         System.out.println("Patterns Found: " + patternsCount);
         System.out.println("STEP-2..........................\n");
+        boolean pairTracker = false;
         for (int i = 0; i < patterns.size(); i++) {
             if (patterns.get(i).size() == 1) {
                 pairs.add(patterns.get(i).get(0));
@@ -158,6 +198,7 @@ public class ProposedAlgorithm {
 //                        System.out.println(mintermGroup + " " + mintermGroup1);
 //                        System.out.println(patterns.get(i).get(j).getGroupedMinterms() + "  " + patterns.get(i).get(g)
 //                                .getGroupedMinterms());
+                        pairTracker = true;
                         char[] pattern = mintermGroup.toCharArray();
                         pattern[location] = 'x';
                         Minterm_Group group = new Minterm_Group(String.copyValueOf(pattern));
@@ -167,6 +208,10 @@ public class ProposedAlgorithm {
                         pairs.add(group);
                     }
                 }
+                if (!pairTracker) {
+                    pairs.add(patterns.get(i).get(j));
+                }
+                pairTracker = false;
             }
         }
 
@@ -174,7 +219,6 @@ public class ProposedAlgorithm {
 
         System.out.println("Total pairs: " + pairs.size());
         ShowResult.showPairs(pairs);
-
 
 //        System.out.println("Start Time: " + startTime);
 //        System.out.println("End Time: " + endTime);

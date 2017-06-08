@@ -14,3 +14,43 @@ End Time: 6888902514866
 Total execution time: 5653682
 Total execution time: 5.653682 mili.Sec 
 ****************************************************
+****************************************************
+Quine-McCluskey Algorithm
+Kmap Data: 0 3 7 11 15 9 -1
+Start Time: 12764767997224
+End Time: 12764773529174
+Total execution time: 5531950
+Total execution time: 5.53195 mili.Sec 
+****************************************************
+****************************************************
+Quine-McCluskey Algorithm
+Kmap Data: 0 3 7 11 15 9 -1
+Start Time: 13703206513118
+End Time: 13703221811310
+Total execution time: 15298192
+Total execution time: 15.298192 mili.Sec 
+****************************************************
+****************************************************
+Quine-McCluskey Algorithm
+Kmap Data: 0 3 7 11 15 9 -1
+Start Time: 13717239402904
+End Time: 13717246359951
+Total execution time: 6957047
+Total execution time: 6.957047 mili.Sec 
+****************************************************
+****************************************************
+Quine-McCluskey Algorithm
+Kmap Data: 0 3 7 11 15 9 -1
+Start Time: 14804789174539
+End Time: 14804795032191
+Total execution time: 5857652
+Total execution time: 5.857652 mili.Sec 
+****************************************************
+****************************************************
+Quine-McCluskey Algorithm
+Kmap Data: 0 3 7 11 15 9 -1
+Start Time: 14820398195114
+End Time: 14820405069113
+Total execution time: 6873999
+Total execution time: 6.873999 mili.Sec 
+****************************************************
