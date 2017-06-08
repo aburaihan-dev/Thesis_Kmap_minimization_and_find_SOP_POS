@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49fad53a-630d-4562-be97-bca61cc92d32" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/msrabon.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Greedy Algorithm/src/Test.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Quine–McCluskey Algorithm/src/QuineMcCluskeyAlgorithm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Proposed Algorithm/Minterm.class" afterPath="$PROJECT_DIR$/out/production/Proposed Algorithm/Minterm.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Proposed Algorithm/Minterm_Group.class" afterPath="$PROJECT_DIR$/out/production/Proposed Algorithm/Minterm_Group.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Proposed Algorithm/src/ProposedAlgorithm_v2.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Proposed Algorithm/src/ShowResult.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Proposed Algorithm/ProposedAlgorithm.class" afterPath="$PROJECT_DIR$/out/production/Proposed Algorithm/ProposedAlgorithm.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Proposed Algorithm/src/Minterm.java" afterPath="$PROJECT_DIR$/Proposed Algorithm/src/Minterm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Proposed Algorithm/src/Minterm_Group.java" afterPath="$PROJECT_DIR$/Proposed Algorithm/src/Minterm_Group.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Proposed Algorithm/src/ProposedAlgorithm.java" afterPath="$PROJECT_DIR$/Proposed Algorithm/src/ProposedAlgorithm.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,30 +21,43 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ProposedAlgorithm.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProposedAlgorithm.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Proposed Algorithm/src/ProposedAlgorithm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="147" column="66" lean-forward="true" selection-start-line="147" selection-start-column="66" selection-end-line="147" selection-end-column="66" />
+            <state relative-caret-position="180">
+              <caret line="160" column="4" lean-forward="false" selection-start-line="160" selection-start-column="4" selection-end-line="160" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#ProposedAlgorithm#0" expanded="true" />
-                <element signature="method#resultConverter#0;class#ProposedAlgorithm#0" expanded="true" />
-                <marker date="1496215498981" expanded="true" signature="2212:3607" ph="..." />
-                <marker date="1496215498981" expanded="true" signature="2212:3621" ph="..." />
-                <marker date="1496215498981" expanded="true" signature="2300:3607" ph="..." />
-                <marker date="1496215498981" expanded="true" signature="3636:5258" ph="..." />
+                <marker date="1496852898986" expanded="true" signature="2223:3737" ph="..." />
+                <marker date="1496852898986" expanded="true" signature="2223:3751" ph="..." />
+                <marker date="1496852898986" expanded="true" signature="2311:3737" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QuineMcCluskeyAlgorithm.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Quine–McCluskey Algorithm/src/QuineMcCluskeyAlgorithm.java">
+      <file leaf-file-name="ShowResult.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Proposed Algorithm/src/ShowResult.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="107" column="96" lean-forward="false" selection-start-line="107" selection-start-column="96" selection-end-line="107" selection-end-column="96" />
-              <folding />
+            <state relative-caret-position="312">
+              <caret line="26" column="42" lean-forward="true" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
+              <folding>
+                <element signature="method#showTruthtable#0;class#ShowResult#0" expanded="true" />
+                <element signature="method#showPairs#0;class#ShowResult#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProposedAlgorithm_v2.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Proposed Algorithm/src/ProposedAlgorithm_v2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="63" column="44" lean-forward="false" selection-start-line="63" selection-start-column="44" selection-end-line="63" selection-end-column="44" />
+              <folding>
+                <element signature="method#getPair#0;class#ProposedAlgorithm_v2#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,7 +90,9 @@
         <option value="$PROJECT_DIR$/Quine–McCluskey Algorithm/src/QuineMcCluskeyAlgorithm.java" />
         <option value="$PROJECT_DIR$/Proposed Algorithm/src/Minterm.java" />
         <option value="$PROJECT_DIR$/Proposed Algorithm/src/Minterm_Group.java" />
+        <option value="$PROJECT_DIR$/Proposed Algorithm/src/ShowResult.java" />
         <option value="$PROJECT_DIR$/Proposed Algorithm/src/ProposedAlgorithm.java" />
+        <option value="$PROJECT_DIR$/Proposed Algorithm/src/ProposedAlgorithm_v2.java" />
       </list>
     </option>
   </component>
@@ -116,9 +126,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -195,6 +202,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -203,9 +213,13 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="Console" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/Assignment1" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\msrabon\IdeaProjects\Thesis - Kmap minimization and find SOP &amp; POS\Quine–McCluskey Algorithm\src" />
     </key>
@@ -222,7 +236,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ProposedAlgorithm">
+  <component name="RunManager" selected="Application.ProposedAlgorithm_v2">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -671,10 +685,26 @@
       <envs />
       <method />
     </configuration>
-    <list size="3">
+    <configuration default="false" name="ProposedAlgorithm_v2" type="Application" factoryName="Application" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="ProposedAlgorithm_v2" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Proposed Algorithm" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.QuineMcCluskeyAlgorithm" />
       <item index="1" class="java.lang.String" itemvalue="Application.Test" />
       <item index="2" class="java.lang.String" itemvalue="Application.ProposedAlgorithm" />
+      <item index="3" class="java.lang.String" itemvalue="Application.ProposedAlgorithm_v2" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -694,11 +724,13 @@
       <workItem from="1494392562170" duration="12085000" />
       <workItem from="1496206748868" duration="6180000" />
       <workItem from="1496213835692" duration="1731000" />
+      <workItem from="1496585755499" duration="1409000" />
+      <workItem from="1496829161673" duration="8909000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33304000" />
+    <option name="totallyTimeSpent" value="43622000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -712,26 +744,26 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25603864" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38808373" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22705314" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15582451" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15885022" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3494364" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49597424" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -750,18 +782,18 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39774558" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49597424" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38808373" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.294686" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22841966" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15355521" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22705314" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15885022" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -777,102 +809,40 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Proposed Algorithm/src/ProposedAlgorithm.java</url>
-          <line>68</line>
+          <url>file://$PROJECT_DIR$/Proposed Algorithm/src/ProposedAlgorithm_v2.java</url>
+          <line>50</line>
           <properties />
-          <option name="timeStamp" value="80" />
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Proposed Algorithm/src/ProposedAlgorithm_v2.java</url>
+          <line>51</line>
+          <properties />
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Proposed Algorithm/src/ProposedAlgorithm_v2.java</url>
+          <line>47</line>
+          <properties />
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Proposed Algorithm/src/ProposedAlgorithm.java</url>
+          <line>148</line>
+          <properties />
+          <option name="timeStamp" value="104" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Proposed Algorithm/src/ProposedAlgorithm.java</url>
           <line>69</line>
           <properties />
-          <option name="timeStamp" value="81" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Proposed Algorithm/src/ProposedAlgorithm.java</url>
-          <line>70</line>
-          <properties />
-          <option name="timeStamp" value="82" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Proposed Algorithm/src/ProposedAlgorithm.java</url>
-          <line>72</line>
-          <properties />
-          <option name="timeStamp" value="84" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Proposed Algorithm/src/ProposedAlgorithm.java</url>
-          <line>71</line>
-          <properties />
-          <option name="timeStamp" value="85" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Proposed Algorithm/src/ProposedAlgorithm.java</url>
-          <line>73</line>
-          <properties />
-          <option name="timeStamp" value="86" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Proposed Algorithm/src/ProposedAlgorithm.java</url>
-          <line>74</line>
-          <properties />
-          <option name="timeStamp" value="87" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Proposed Algorithm/src/ProposedAlgorithm.java</url>
-          <line>75</line>
-          <properties />
-          <option name="timeStamp" value="88" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Proposed Algorithm/src/ProposedAlgorithm.java</url>
-          <line>76</line>
-          <properties />
-          <option name="timeStamp" value="89" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Proposed Algorithm/src/ProposedAlgorithm.java</url>
-          <line>77</line>
-          <properties />
-          <option name="timeStamp" value="90" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Proposed Algorithm/src/ProposedAlgorithm.java</url>
-          <line>78</line>
-          <properties />
-          <option name="timeStamp" value="91" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Proposed Algorithm/src/ProposedAlgorithm.java</url>
-          <line>79</line>
-          <properties />
-          <option name="timeStamp" value="92" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Proposed Algorithm/src/ProposedAlgorithm.java</url>
-          <line>51</line>
-          <properties />
-          <option name="timeStamp" value="94" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Proposed Algorithm/src/ProposedAlgorithm.java</url>
-          <line>208</line>
-          <properties />
-          <option name="timeStamp" value="98" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/Proposed Algorithm/src/ProposedAlgorithm.java</url>
-          <line>186</line>
-          <properties class="ProposedAlgorithm" method="resultConverter">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="95" />
+          <option name="timeStamp" value="105" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="99" />
+      <option name="time" value="106" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -881,6 +851,60 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Proposed Algorithm/src/ProposedAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="20" lean-forward="true" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#ProposedAlgorithm#0" expanded="true" />
+            <marker date="1496852898986" expanded="true" signature="2223:3737" ph="..." />
+            <marker date="1496852898986" expanded="true" signature="2223:3751" ph="..." />
+            <marker date="1496852898986" expanded="true" signature="2311:3737" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Quine–McCluskey Algorithm/src/QuineMcCluskeyAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1785">
+          <caret line="107" column="96" lean-forward="false" selection-start-line="107" selection-start-column="96" selection-end-line="107" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Proposed Algorithm/src/ProposedAlgorithm_v2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1564">
+          <caret line="94" column="50" lean-forward="true" selection-start-line="94" selection-start-column="50" selection-end-line="94" selection-end-column="50" />
+          <folding>
+            <element signature="method#getPair#0;class#ProposedAlgorithm_v2#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Proposed Algorithm/src/ProposedAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#ProposedAlgorithm#0" expanded="true" />
+            <marker date="1496852898986" expanded="true" signature="2223:3737" ph="..." />
+            <marker date="1496852898986" expanded="true" signature="2223:3751" ph="..." />
+            <marker date="1496852898986" expanded="true" signature="2311:3737" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Quine–McCluskey Algorithm/src/QuineMcCluskeyAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1819">
+          <caret line="107" column="96" lean-forward="false" selection-start-line="107" selection-start-column="96" selection-end-line="107" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Proposed Algorithm/src/Minterm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -891,8 +915,6 @@
             <element signature="method#Minterm#1;class#Minterm#0" expanded="true" />
             <element signature="e#547#548#0" expanded="true" />
             <element signature="e#580#581#0" expanded="true" />
-            <element signature="e#709#710#0" expanded="true" />
-            <element signature="e#738#739#0" expanded="true" />
             <element signature="e#783#784#0" expanded="true" />
             <element signature="e#819#820#0" expanded="true" />
             <element signature="e#914#915#0" expanded="true" />
@@ -927,11 +949,9 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#ProposedAlgorithm#0" expanded="true" />
-            <element signature="method#resultConverter#0;class#ProposedAlgorithm#0" expanded="true" />
-            <marker date="1496215498981" expanded="true" signature="2212:3607" ph="..." />
-            <marker date="1496215498981" expanded="true" signature="2212:3621" ph="..." />
-            <marker date="1496215498981" expanded="true" signature="2300:3607" ph="..." />
-            <marker date="1496215498981" expanded="true" signature="3636:5258" ph="..." />
+            <marker date="1496852898986" expanded="true" signature="2223:3737" ph="..." />
+            <marker date="1496852898986" expanded="true" signature="2223:3751" ph="..." />
+            <marker date="1496852898986" expanded="true" signature="2311:3737" ph="..." />
           </folding>
         </state>
       </provider>
@@ -946,8 +966,6 @@
             <element signature="method#Minterm#1;class#Minterm#0" expanded="true" />
             <element signature="e#547#548#0" expanded="true" />
             <element signature="e#580#581#0" expanded="true" />
-            <element signature="e#709#710#0" expanded="true" />
-            <element signature="e#738#739#0" expanded="true" />
             <element signature="e#783#784#0" expanded="true" />
             <element signature="e#819#820#0" expanded="true" />
             <element signature="e#914#915#0" expanded="true" />
@@ -982,11 +1000,9 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#ProposedAlgorithm#0" expanded="true" />
-            <element signature="method#resultConverter#0;class#ProposedAlgorithm#0" expanded="true" />
-            <marker date="1496215498981" expanded="true" signature="2212:3607" ph="..." />
-            <marker date="1496215498981" expanded="true" signature="2212:3621" ph="..." />
-            <marker date="1496215498981" expanded="true" signature="2300:3607" ph="..." />
-            <marker date="1496215498981" expanded="true" signature="3636:5258" ph="..." />
+            <marker date="1496852898986" expanded="true" signature="2223:3737" ph="..." />
+            <marker date="1496852898986" expanded="true" signature="2223:3751" ph="..." />
+            <marker date="1496852898986" expanded="true" signature="2311:3737" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1001,8 +1017,6 @@
             <element signature="method#Minterm#1;class#Minterm#0" expanded="true" />
             <element signature="e#547#548#0" expanded="true" />
             <element signature="e#580#581#0" expanded="true" />
-            <element signature="e#709#710#0" expanded="true" />
-            <element signature="e#738#739#0" expanded="true" />
             <element signature="e#783#784#0" expanded="true" />
             <element signature="e#819#820#0" expanded="true" />
             <element signature="e#914#915#0" expanded="true" />
@@ -1067,9 +1081,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Quine–McCluskey Algorithm/src/QuineMcCluskeyAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="104" column="34" lean-forward="false" selection-start-line="104" selection-start-column="34" selection-end-line="104" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Proposed Algorithm/src/Minterm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#Minterm#0" expanded="true" />
+            <element signature="method#Minterm#0;class#Minterm#0" expanded="true" />
+            <element signature="method#Minterm#1;class#Minterm#0" expanded="true" />
+            <element signature="e#547#548#0" expanded="true" />
+            <element signature="e#580#581#0" expanded="true" />
+            <element signature="e#783#784#0" expanded="true" />
+            <element signature="e#819#820#0" expanded="true" />
+            <element signature="e#914#915#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Proposed Algorithm/src/Minterm_Group.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
+        <state relative-caret-position="87">
           <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1087,45 +1126,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Proposed Algorithm/src/Minterm.java">
+    <entry file="file://$PROJECT_DIR$/Proposed Algorithm/src/ProposedAlgorithm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="160" column="4" lean-forward="false" selection-start-line="160" selection-start-column="4" selection-end-line="160" selection-end-column="4" />
           <folding>
-            <element signature="docComment;class#Minterm#0" expanded="true" />
-            <element signature="method#Minterm#0;class#Minterm#0" expanded="true" />
-            <element signature="method#Minterm#1;class#Minterm#0" expanded="true" />
-            <element signature="e#547#548#0" expanded="true" />
-            <element signature="e#580#581#0" expanded="true" />
-            <element signature="e#709#710#0" expanded="true" />
-            <element signature="e#738#739#0" expanded="true" />
-            <element signature="e#783#784#0" expanded="true" />
-            <element signature="e#819#820#0" expanded="true" />
-            <element signature="e#914#915#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#ProposedAlgorithm#0" expanded="true" />
+            <marker date="1496852898986" expanded="true" signature="2223:3737" ph="..." />
+            <marker date="1496852898986" expanded="true" signature="2223:3751" ph="..." />
+            <marker date="1496852898986" expanded="true" signature="2311:3737" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Quine–McCluskey Algorithm/src/QuineMcCluskeyAlgorithm.java">
+    <entry file="file://$PROJECT_DIR$/Proposed Algorithm/src/ShowResult.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="107" column="96" lean-forward="false" selection-start-line="107" selection-start-column="96" selection-end-line="107" selection-end-column="96" />
-          <folding />
+        <state relative-caret-position="312">
+          <caret line="26" column="42" lean-forward="true" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
+          <folding>
+            <element signature="method#showTruthtable#0;class#ShowResult#0" expanded="true" />
+            <element signature="method#showPairs#0;class#ShowResult#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Proposed Algorithm/src/ProposedAlgorithm.java">
+    <entry file="file://$PROJECT_DIR$/Proposed Algorithm/src/ProposedAlgorithm_v2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="147" column="66" lean-forward="true" selection-start-line="147" selection-start-column="66" selection-end-line="147" selection-end-column="66" />
+        <state relative-caret-position="112">
+          <caret line="63" column="44" lean-forward="false" selection-start-line="63" selection-start-column="44" selection-end-line="63" selection-end-column="44" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#ProposedAlgorithm#0" expanded="true" />
-            <element signature="method#resultConverter#0;class#ProposedAlgorithm#0" expanded="true" />
-            <marker date="1496215498981" expanded="true" signature="2212:3607" ph="..." />
-            <marker date="1496215498981" expanded="true" signature="2212:3621" ph="..." />
-            <marker date="1496215498981" expanded="true" signature="2300:3607" ph="..." />
-            <marker date="1496215498981" expanded="true" signature="3636:5258" ph="..." />
+            <element signature="method#getPair#0;class#ProposedAlgorithm_v2#0" expanded="true" />
           </folding>
         </state>
       </provider>
