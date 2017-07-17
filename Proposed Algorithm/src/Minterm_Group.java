@@ -6,11 +6,11 @@ import java.util.List;
  */
 public class Minterm_Group {
     private String bit_string;
-    private List<Minterm> groupedMinterms;
+    private List<Integer> groupedMinterms;
 
     public Minterm_Group(String bit_string) {
         this.bit_string = bit_string;
-        this.groupedMinterms = new ArrayList<>();
+        groupedMinterms = new ArrayList<>();
     }
 
     public String getBit_string() {
@@ -21,7 +21,7 @@ public class Minterm_Group {
         this.bit_string = bit_string;
     }
 
-    public List<Minterm> getGroupedMinterms() {
+    public List<Integer> getGroupedMinterms() {
         return groupedMinterms;
     }
 
@@ -33,12 +33,13 @@ public class Minterm_Group {
         return str;
     }
 
-    public void setGroupedMinterms(List<Minterm> groupedMinterms) {
+    public void setGroupedMinterms(List<Integer> groupedMinterms) {
         this.groupedMinterms = groupedMinterms;
     }
 
-    public void addToGroupedMinterms(Minterm minterm) {
-        this.groupedMinterms.add(minterm);
+    public void addToGroupedMinterms(int x, int y) {
+        this.groupedMinterms.add(x);
+        this.groupedMinterms.add(y);
     }
 
     @Override

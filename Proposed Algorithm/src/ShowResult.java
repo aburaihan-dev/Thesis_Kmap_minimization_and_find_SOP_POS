@@ -5,6 +5,16 @@ import java.util.List;
  */
 public class ShowResult {
 
+    private static final ShowResult showResult = new ShowResult();
+
+    private ShowResult() {
+
+    }
+
+    public static ShowResult getInstance() {
+        return showResult;
+    }
+
     public static void showTruthtable() {
         for (int i = 0; i < 16; i++) {
             System.out.println(String.format("%4s", Integer.toBinaryString(i)).replace(" ", "0"));

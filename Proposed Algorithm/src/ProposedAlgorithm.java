@@ -10,234 +10,272 @@ import java.util.*;
 public class ProposedAlgorithm {
 
     public static void main(String[] args) {
-        List<Minterm> lsb_0 = new ArrayList<>();
-        List<Minterm> lsb_1 = new ArrayList<>();
-        List<List<Minterm>> kMap = new ArrayList<>();
-        // patterns holder.
-        List<List<Minterm_Group>> patterns = new ArrayList<>();
-        List<Minterm_Group> pairs = new ArrayList<>();
-        List<Minterm> minterms = new ArrayList<>();
         Scanner scan = new Scanner(System.in);
 
-        boolean dontcaresAvailable;
-        int minterm;
-        int patternsCount = 0;
-        // patterns holder based on position of x.
-        for (int i = 0; i < 4; i++) {
-            patterns.add(new ArrayList<>());
-//            patternsFinale.add(new ArrayList<>());
-        }
+        ShowResult showResult = ShowResult.getInstance();
+        List<Integer> integerList = new ArrayList<>();
+        List<Integer> minterms;
+        List<Integer> grp;
+        List<Integer> grp_0 = new ArrayList<>();
+        List<Integer> grp_1 = new ArrayList<>();
+        List<List<Integer>> kMap = new ArrayList<>();
+        List<Minterm_Group> minterm_groups = new ArrayList<>();
+        List<Minterm_Group> result_SOP = new ArrayList<>();
 
-        Minterm minterm1;
+        boolean pair = false;
+        int x, totalBits, max = 0;
 
-        System.out.print("Enter minterm: ");
-        while ((minterm = scan.nextInt()) != -1) {
-            minterm1 = new Minterm(minterm, String.format("%4s", Integer.toBinaryString(minterm)).replace(" ", "0"));
-            if (minterm % 2 == 0) {
-                lsb_0.add(minterm1);
-
-            } else {
-                lsb_1.add(minterm1);
+        System.out.println("Enter Minterms (input -1 to stop input.): ");
+        while ((x = scan.nextInt()) != -1) {
+            integerList.add(x);
+            if (x > max) {
+                max = x;
             }
-            minterms.add(minterm1);
-//            System.out.print("Enter minterm: ");
         }
 
-        kMap.add(lsb_0);
-        kMap.add(lsb_1);
-
-        int count = 0;
-        System.out.println("STEP-1.....................\n");
-        System.out.println("Patterns Minterm Groups");
         final long startTime = System.nanoTime();
-        for (List<Minterm> lsb : kMap) {
-            int groupCount = 1;
-            for (int i = 0; i < lsb.size(); i++) {
-                for (int j = i + 1; j < lsb.size(); j++) {
-                    count++;
-                    String min_1 = lsb.get(i).getBit_string();
-                    String min_2 = lsb.get(j).getBit_string();
-                    int location = 0;
-                    int diff = 0;
-                    for (int k = 0; k < min_1.length(); k++) {
-                        if (min_1.charAt(k) != min_2.charAt(k)) {
-//                        System.out.println(min_1 + "  " + min_2);
-                            diff++;
-                            location = k;
+        totalBits = (int) Math.ceil((double) Math.log(max) / Math.log(2));
+
+        for (Integer integer : integerList) {
+            if (integer % 2 == 0) {
+                grp_0.add(integer);
+            } else {
+                grp_1.add(integer);
+            }
+        }
+
+        minterms = new ArrayList<>(integerList);
+        kMap.add(grp_0);
+        kMap.add(grp_1);
+
+        Minterm_Group mintermGroup;
+        for (int i = 0; i < 2; i++) {
+            grp = kMap.get(i);
+            int size = grp.size();
+
+            if (size > 1) {
+                for (int j = 0; j < size - 1; j++) {
+                    int a = grp.get(j);
+                    for (int k = i + 1; k < size; k++) {
+                        int b = grp.get(k);
+                        pair = false;
+                        switch (a ^ b) {
+                            case 1:
+                                pair = true;
+                                minterm_groups.add(getPairedMinterms(0, totalBits, a, b));
+                                break;
+                            case 2:
+                                pair = true;
+                                minterm_groups.add(getPairedMinterms(1, totalBits, a, b));
+                                break;
+                            case 4:
+                                pair = true;
+                                minterm_groups.add(getPairedMinterms(2, totalBits, a, b));
+                                break;
+                            case 8:
+                                pair = true;
+                                minterm_groups.add(getPairedMinterms(3, totalBits, a, b));
+                                break;
+                            case 16:
+                                pair = true;
+                                minterm_groups.add(getPairedMinterms(4, totalBits, a, b));
+                                break;
+                            case 32:
+                                pair = true;
+                                minterm_groups.add(getPairedMinterms(5, totalBits, a, b));
+                                break;
+                            case 64:
+                                pair = true;
+                                minterm_groups.add(getPairedMinterms(6, totalBits, a, b));
+                                break;
+                            case 128:
+                                pair = true;
+                                minterm_groups.add(getPairedMinterms(7, totalBits, a, b));
+                                break;
+                            case 256:
+                                pair = true;
+                                minterm_groups.add(getPairedMinterms(8, totalBits, a, b));
+                                break;
+                            case 512:
+                                pair = true;
+                                minterm_groups.add(getPairedMinterms(9, totalBits, a, b));
+                                break;
+                            case 1024:
+                                pair = true;
+                                minterm_groups.add(getPairedMinterms(10, totalBits, a, b));
+                                break;
+                        }
+                        if (pair) {
+                            minterms.remove(grp.get(k));
+                            minterms.remove(grp.get(j));
                         }
                     }
-
-                    if (diff == 1) {
-                        char[] pattern = min_1.toCharArray();
-                        pattern[location] = 'x';
-                        lsb.get(i).setPaired(true);
-                        lsb.get(j).setPaired(true);
-                        minterms.remove(lsb.get(i));
-                        minterms.remove(lsb.get(j));
-                        Minterm_Group mintermGroup = new Minterm_Group(String.copyValueOf(pattern));
-                        mintermGroup.addToGroupedMinterms(lsb.get(i));
-                        mintermGroup.addToGroupedMinterms(lsb.get(j));
-                        patterns.get(location).add(mintermGroup);
-                        System.out.println(mintermGroup.getBit_string() + "    " + mintermGroup.getAllMinterms());
-                        patternsCount++;
+                }
+            } else if (grp.size() == 1) {
+                int a = grp.get(0);
+                grp = kMap.get(1 ^ i);
+                System.out.println("ELSE: " + size);
+                pair = false;
+                for (int j = 0; j < grp.size(); j++) {
+                    int b = minterms.get(j);
+                    pair = false;
+                    switch (a ^ b) {
+                        case 1:
+                            pair = true;
+                            minterm_groups.add(getPairedMinterms(0, totalBits, a, b));
+                            break;
+                        case 2:
+                            pair = true;
+                            minterm_groups.add(getPairedMinterms(1, totalBits, a, b));
+                            break;
+                        case 4:
+                            pair = true;
+                            minterm_groups.add(getPairedMinterms(2, totalBits, a, b));
+                            break;
+                        case 8:
+                            pair = true;
+                            minterm_groups.add(getPairedMinterms(3, totalBits, a, b));
+                            break;
+                        case 16:
+                            pair = true;
+                            minterm_groups.add(getPairedMinterms(4, totalBits, a, b));
+                            break;
+                        case 32:
+                            pair = true;
+                            minterm_groups.add(getPairedMinterms(5, totalBits, a, b));
+                            break;
+                        case 64:
+                            pair = true;
+                            minterm_groups.add(getPairedMinterms(6, totalBits, a, b));
+                            break;
+                        case 128:
+                            pair = true;
+                            minterm_groups.add(getPairedMinterms(7, totalBits, a, b));
+                            break;
+                        case 256:
+                            pair = true;
+                            minterm_groups.add(getPairedMinterms(8, totalBits, a, b));
+                            break;
+                        case 512:
+                            pair = true;
+                            minterm_groups.add(getPairedMinterms(9, totalBits, a, b));
+                            break;
+                        case 1024:
+                            pair = true;
+                            minterm_groups.add(getPairedMinterms(10, totalBits, a, b));
+                            break;
+                    }
+                    if (pair) {
+                        minterms.remove(minterms.indexOf(b));
+                        minterms.remove(minterms.indexOf(a));
                     }
                 }
             }
-
-            groupCount--;
         }
 
         for (int i = 0; i < minterms.size(); i++) {
-            if (minterms.size() > 1) {
-                for (int j = i + 1; j < minterms.size(); j++) {
-                    count++;
-                    String min_1 = minterms.get(i).getBit_string();
-                    String min_2 = minterms.get(j).getBit_string();
-                    int diff = 0;
-                    int location = 0;
-                    for (int k = 0; k < min_1.length(); k++) {
-                        if (min_1.charAt(k) != min_2.charAt(k)) {
-//                        System.out.println(min_1 + "  " + min_2);
-                            diff++;
-                            location = k;
-                        }
-                    }
-
-                    if (diff == 1) {
-                        char[] pattern = min_1.toCharArray();
-                        pattern[location] = 'x';
-                        minterms.get(i).setPaired(true);
-                        minterms.get(j).setPaired(true);
-                        Minterm_Group mintermGroup = new Minterm_Group(String.copyValueOf(pattern));
-                        mintermGroup.addToGroupedMinterms(minterms.get(i));
-                        mintermGroup.addToGroupedMinterms(minterms.get(j));
-                        minterms.remove(minterms.get(j));
-                        minterms.remove(minterms.get(i));
-                        patterns.get(location).add(mintermGroup);
-                        System.out.println(mintermGroup.getBit_string() + "    " + mintermGroup.getAllMinterms());
-                        patternsCount++;
-                    }
+            int a = minterms.get(i);
+            for (int j = i + 1; j < minterms.size(); j++) {
+                int b = minterms.get(j);
+                pair = false;
+                switch (a ^ b) {
+                    case 1:
+                        pair = true;
+                        minterm_groups.add(getPairedMinterms(0, totalBits, a, b));
+                        break;
+                    case 2:
+                        pair = true;
+                        minterm_groups.add(getPairedMinterms(1, totalBits, a, b));
+                        break;
+                    case 4:
+                        pair = true;
+                        minterm_groups.add(getPairedMinterms(2, totalBits, a, b));
+                        break;
+                    case 8:
+                        pair = true;
+                        minterm_groups.add(getPairedMinterms(3, totalBits, a, b));
+                        break;
+                    case 16:
+                        pair = true;
+                        minterm_groups.add(getPairedMinterms(4, totalBits, a, b));
+                        break;
+                    case 32:
+                        pair = true;
+                        minterm_groups.add(getPairedMinterms(5, totalBits, a, b));
+                        break;
+                    case 64:
+                        pair = true;
+                        minterm_groups.add(getPairedMinterms(6, totalBits, a, b));
+                        break;
+                    case 128:
+                        pair = true;
+                        minterm_groups.add(getPairedMinterms(7, totalBits, a, b));
+                        break;
+                    case 256:
+                        pair = true;
+                        minterm_groups.add(getPairedMinterms(8, totalBits, a, b));
+                        break;
+                    case 512:
+                        pair = true;
+                        minterm_groups.add(getPairedMinterms(9, totalBits, a, b));
+                        break;
+                    case 1024:
+                        pair = true;
+                        minterm_groups.add(getPairedMinterms(10, totalBits, a, b));
+                        break;
                 }
-            } else {
-                int q = 0;
-                if (minterms.get(i).getMinterm_no() % 2 == 1) {
-                    q = 0;
-                } else {
-                    q = 1;
+                if (pair) {
+                    minterms.remove(minterms.indexOf(b));
+                    j--;
                 }
-
-                for (int j = 0; j < kMap.get(q).size() && minterms.size()>0; j++) {
-                    count++;
-                    String min_1 = minterms.get(i).getBit_string();
-                    String min_2 = kMap.get(q).get(j).getBit_string();
-                    int diff = 0;
-                    int location = 0;
-                    for (int k = 0; k < min_1.length(); k++) {
-                        if (min_1.charAt(k) != min_2.charAt(k)) {
-//                        System.out.println(min_1 + "  " + min_2);
-                            diff++;
-                            location = k;
-                        }
-                    }
-
-                    if (diff == 1) {
-                        char[] pattern = min_1.toCharArray();
-                        pattern[location] = 'x';
-                        minterms.get(i).setPaired(true);
-                        minterms.get(j).setPaired(true);
-                        Minterm_Group mintermGroup = new Minterm_Group(String.copyValueOf(pattern));
-                        mintermGroup.addToGroupedMinterms(minterms.get(i));
-                        mintermGroup.addToGroupedMinterms(kMap.get(q).get(j));
-                        minterms.remove(minterms.get(i));
-                        patterns.get(location).add(mintermGroup);
-                        System.out.println(mintermGroup.getBit_string() + "    " + mintermGroup.getAllMinterms());
-                        patternsCount++;
-                    }
+                if (pair && minterms.contains(a)) {
+                    minterms.remove(minterms.indexOf(a));
+                    j -= 2;
                 }
-            }
-
-        }
-
-        if (minterms.size() >= 1) {
-            for (Minterm minterm2 : minterms) {
-                count++;
-                Minterm_Group minterm_group = new Minterm_Group(minterm2.getBit_string());
-                minterm_group.setGroupedMinterms(new ArrayList<>());
-                minterm_group.addToGroupedMinterms(minterm2);
-                pairs.add(minterm_group);
             }
         }
 
-        System.out.println("\nStep-1 Iteration Count: " + count);
-        System.out.println("Patterns Found: " + patternsCount);
-        System.out.println("STEP-2..........................\n");
-        boolean pairTracker = false;
-        for (int i = 0; i < patterns.size(); i++) {
-            if (patterns.get(i).size() == 1) {
-                pairs.add(patterns.get(i).get(0));
-            }
-            for (int j = 0; j < patterns.get(i).size() - 1; j++) {
-//                System.out.println(j + " " + patterns.get(i).get(j) + "      " + patterns.get(i).get(j)
-//                        .getAllMinterms());
-                for (int g = j + 1; g < patterns.get(i).size(); g++) {
-                    String mintermGroup = patterns.get(i).get(j).getBit_string();
-                    String mintermGroup1 = patterns.get(i).get(g).getBit_string();
-                    int bit_diff = 0;
-                    int location = 0;
-                    for (int k = 0; k < mintermGroup.length(); k++) {
-                        if ((mintermGroup.charAt(k) != mintermGroup1.charAt(k)) &&
-                                (mintermGroup1.charAt(k) != 'x')) {
-//                        System.out.println(mintermGroup.charAt(k) + "  " +
-//                                                   mintermGroup1.charAt(k));
-                            bit_diff++;
-                            location = k;
-                        }
-                    }
-
-                    if (bit_diff == 1) {
-//                        System.out.println(mintermGroup + " " + mintermGroup1);
-//                        System.out.println(patterns.get(i).get(j).getGroupedMinterms() + "  " + patterns.get(i).get(g)
-//                                .getGroupedMinterms());
-                        pairTracker = true;
-                        char[] pattern = mintermGroup.toCharArray();
-                        pattern[location] = 'x';
-                        Minterm_Group group = new Minterm_Group(String.copyValueOf(pattern));
-
-                        group.setGroupedMinterms(new ArrayList<>(patterns.get(i).get(j).getGroupedMinterms()));
-                        group.getGroupedMinterms().addAll(patterns.get(i).get(g).getGroupedMinterms());
-                        pairs.add(group);
-                    }
-                }
-                if (!pairTracker) {
-                    pairs.add(patterns.get(i).get(j));
-                }
-                pairTracker = false;
-            }
+        for (Integer integer : minterms) {
+            result_SOP.add(getPairedMinterms(-1, totalBits, integer, -1));
         }
 
         final long endTime = System.nanoTime();
+        System.out.println("Total execution time: " + ((double) (endTime - startTime) / 1000000) + " mili.Sec");
 
-        System.out.println("Total pairs: " + pairs.size());
-        ShowResult.showPairs(pairs);
+        for (int i = 0; i < minterm_groups.size(); i++) {
+            System.out.println(minterm_groups.get(i).getBit_string());
+        }
 
-//        System.out.println("Start Time: " + startTime);
-//        System.out.println("End Time: " + endTime);
-        System.out.println("Total execution time: " + (double) (endTime - startTime) / 1000000);
-//        File file = new File("logs_0.txt");
-//        try (PrintStream out = new PrintStream(new FileOutputStream(file,true))) {
-//            out.println("****************************************************");
-//            out.println("Proposed Algorithm");
-//            out.println("Kmap Data: 0 3 7 11 15 9 -1");
-//            out.print("Start Time: " + startTime + "\n");
-//            out.print("End Time: " + endTime + "\n");
-//            out.print("Total execution time: " + (endTime - startTime) + "\n");
-//            out.print("Total execution time: " + (double)(endTime - startTime)/1000000 + "milis \n");
-//            out.println("****************************************************");
-//            out.close();
-//        } catch (FileNotFoundException e1) {
-//            e1.printStackTrace();
-//        }
     }
 
+    public static Minterm_Group getPairedMinterms(int location_X, int totalBits, int a, int b) {
+        String str = "";
+        int x;
+        for (int i = 0; i < totalBits; i++) {
+            x = a % 2;
+            if (x == 0) {
+                str = 0 + str;
+            } else {
+                str = 1 + str;
+            }
+            a /= 2;
+        }
+
+        if (location_X != -1) {
+            char[] ch = str.toCharArray();
+            ch[totalBits - location_X - 1] = '_';
+            str = String.valueOf(ch);
+        }
+        Minterm_Group mintermGroup = new Minterm_Group(str);
+        mintermGroup.addToGroupedMinterms(a, b);
+        return mintermGroup;
+    }
+
+    public static String getBitString(String bitString, int location_X) {
+        char[] ch = bitString.toCharArray();
+        ch[location_X] = 'X';
+        bitString = ch.toString();
+        return bitString;
+    }
 
 }
