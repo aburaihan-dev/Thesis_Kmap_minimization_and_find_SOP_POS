@@ -54,3 +54,59 @@ End Time: 14820405069113
 Total execution time: 6873999
 Total execution time: 6.873999 mili.Sec 
 ****************************************************
+****************************************************
+Quine-McCluskey Algorithm
+Kmap Data: 0 3 7 11 15 9 -1
+Start Time: 4772162092950
+End Time: 4772167275234
+Total execution time: 5182284
+Total execution time: 5.182284 mili.Sec 
+****************************************************
+****************************************************
+Quine-McCluskey Algorithm
+Kmap Data: 0 3 7 11 15 9 -1
+Start Time: 4779708975003
+End Time: 4779714360380
+Total execution time: 5385377
+Total execution time: 5.385377 mili.Sec 
+****************************************************
+****************************************************
+Quine-McCluskey Algorithm
+Kmap Data: 0 3 7 11 15 9 -1
+Start Time: 4797313771411
+End Time: 4797318953695
+Total execution time: 5182284
+Total execution time: 5.182284 mili.Sec 
+****************************************************
+****************************************************
+Quine-McCluskey Algorithm
+Kmap Data: 0 3 7 11 15 9 -1
+Start Time: 4811841889123
+End Time: 4811844997384
+Total execution time: 3108261
+Total execution time: 3.108261 mili.Sec 
+****************************************************
+****************************************************
+Quine-McCluskey Algorithm
+Kmap Data: 0 3 7 11 15 9 -1
+Start Time: 4828818812895
+End Time: 4828821738544
+Total execution time: 2925649
+Total execution time: 2.925649 mili.Sec 
+****************************************************
+****************************************************
+Quine-McCluskey Algorithm
+Kmap Data: 0 3 7 11 15 9 -1
+Start Time: 4839585954839
+End Time: 4839589063101
+Total execution time: 3108262
+Total execution time: 3.108262 mili.Sec 
+****************************************************
+****************************************************
+Quine-McCluskey Algorithm
+Kmap Data: 0 3 7 11 15 9 -1
+Start Time: 5728325192405
+End Time: 5728330775328
+Total execution time: 5582923
+Total execution time: 5.582923 mili.Sec 
+****************************************************

@@ -42,6 +42,12 @@ public class Minterm_Group {
         this.groupedMinterms.add(y);
     }
 
+    public void addToGroupedMintermsList(List <Integer> temp){
+        for(int x: temp){
+            this.groupedMinterms.add(x);
+        }
+    }
+
     @Override
     public String toString() {
         return bit_string;
